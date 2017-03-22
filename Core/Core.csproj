@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F82B8F5B-DD3C-402B-B0E0-8827AAC179B5}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Extended.0.5.149\lib\MonoGame.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.5.1.1679, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="AnimationFrame.cs" />
+    <Compile Include="Entity\Component\BulletComponents\BulletGraphicsComponent.cs" />
+    <Compile Include="Entity\Component\BulletComponents\BulletPhysicsComponent.cs" />
+    <Compile Include="Entity\Component\ButtonComponents\ButtonGraphicsComponent.cs" />
+    <Compile Include="Entity\Component\ButtonComponents\ButtonInputComponent.cs" />
+    <Compile Include="Entity\Component\ButtonComponents\ButtonPhysicsComponent.cs" />
+    <Compile Include="Entity\Component\EnemyComponents\EnemyGraphicsComponent.cs" />
+    <Compile Include="Entity\Component\EnemyComponents\EnemyPhysicsComponent.cs" />
+    <Compile Include="Entity\Component\PlayerComponents\PlayerGraphicsComponent.cs" />
+    <Compile Include="Entity\Component\PlayerComponents\PlayerPhysicsComponent.cs" />
+    <Compile Include="Entity\Component\ShieldComponents\ShieldGraphicsComponent.cs" />
+    <Compile Include="Entity\Component\ShieldComponents\ShieldPhysicsComponent.cs" />
+    <Compile Include="Entity\Component\StartPositionComponent.cs" />
+    <Compile Include="Entity\EntityObject.cs" />
+    <Compile Include="Entity\Component\GraphicsComponent.cs" />
+    <Compile Include="Entity\Component\PhysicsComponent.cs" />
+    <Compile Include="Entity\Component\InputComponent.cs" />
+    <Compile Include="Entity\Component\PlayerComponents\PlayerInputComponent.cs" />
+    <Compile Include="Entity\EntityInputObject.cs" />
+    <Compile Include="GameObjectCollection.cs" />
+    <Compile Include="ISprite.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\EntityContainer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <MonoGameContentReference Include="Resources\Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\Content\charactersheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\Content\falco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\Content\EnemyBullet.png" />
+    <AndroidAsset Include="Resources\Content\Knight.png" />
+    <AndroidAsset Include="Resources\Content\MoveButton.png" />
+    <AndroidAsset Include="Resources\Content\MoveButtonBIG.png" />
+    <AndroidAsset Include="Resources\Content\RedTile.png" />
+    <AndroidAsset Include="Resources\Content\Warrior.png" />
+    <AndroidAsset Include="Resources\Content\Shields.png" />
+    <AndroidAsset Include="Resources\Content\WhiteTile.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

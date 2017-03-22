@@ -1,0 +1,71 @@
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\Core.dll
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\Core.pdb
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\Core.Core.apk
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\Core.Core-Signed.apk
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\MonoGame.Extended.dll
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\MonoGame.Framework.dll
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\Ouya.Console.Api.dll
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\MonoGame.Framework.xml
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\Ouya.Console.Api.xml
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\obj\Debug\Core.dll
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\obj\Debug\Core.pdb
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\obj\Debug\android\bin\Core.Core.apk
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\obj\Debug\res\values\strings.xml
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\obj\Debug\R.cs.flag
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\obj\Debug\uploadflags.txt
+C:\Users\deathnell\Documents\Visual Studio 2015\Projects\DungeonsandDrinking\Core\bin\Debug\Core.dll.mdb
+G:\DungeonsandDrinking\Core\bin\Debug\Core.dll
+G:\DungeonsandDrinking\Core\bin\Debug\Core.pdb
+G:\DungeonsandDrinking\Core\bin\Debug\Core.Core.apk
+G:\DungeonsandDrinking\Core\bin\Debug\Core.Core-Signed.apk
+G:\DungeonsandDrinking\Core\bin\Debug\MonoGame.Extended.dll
+G:\DungeonsandDrinking\Core\bin\Debug\MonoGame.Framework.dll
+G:\DungeonsandDrinking\Core\bin\Debug\Ouya.Console.Api.dll
+G:\DungeonsandDrinking\Core\bin\Debug\MonoGame.Framework.xml
+G:\DungeonsandDrinking\Core\bin\Debug\Ouya.Console.Api.xml
+G:\DungeonsandDrinking\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+G:\DungeonsandDrinking\Core\obj\Debug\Core.dll
+G:\DungeonsandDrinking\Core\obj\Debug\Core.pdb
+G:\DungeonsandDrinking\Core\obj\Debug\android\bin\Core.Core.apk
+G:\DungeonsandDrinking\Core\obj\Debug\res\values\strings.xml
+G:\DungeonsandDrinking\Core\obj\Debug\R.cs.flag
+G:\DungeonsandDrinking\Core\obj\Debug\uploadflags.txt
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\Core.dll.mdb
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\Core.dll
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\Core.pdb
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\Core.Core.apk
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\Core.Core-Signed.apk
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\MonoGame.Extended.dll
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\MonoGame.Framework.dll
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\Ouya.Console.Api.dll
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\MonoGame.Framework.xml
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\bin\Debug\Ouya.Console.Api.xml
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\Core.dll
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\Core.pdb
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\android\bin\Core.Core.apk
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\res\values\strings.xml
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\R.cs.flag
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\uploadflags.txt
+C:\Users\deathnell\Desktop\DungeonsandDrinking\Core\obj\Debug\Core.dll.mdb
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.dll
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.pdb
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.Core.apk
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.Core-Signed.apk
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\MonoGame.Extended.dll
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\MonoGame.Framework.dll
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Ouya.Console.Api.dll
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\MonoGame.Framework.xml
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Ouya.Console.Api.xml
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\Core.dll
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\Core.pdb
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\android\bin\Core.Core.apk
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\res\values\strings.xml
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\R.cs.flag
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\uploadflags.txt
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\Core.dll.mdb
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.dll.mdb
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\Core.dll.mdb
+C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.dll.mdb

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Android</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/deathnell/Documents/Visual Studio 2015/Projects/DungeonsandDrinking/NewGame/Content/falco.png</File>
+    <File>C:/Users/deathnell/Documents/Visual Studio 2015/Projects/DungeonsandDrinking/NewGame/Content/Warrior.png</File>
+    <File>C:/Users/deathnell/Documents/Visual Studio 2015/Projects/DungeonsandDrinking/NewGame/Content/charactersheet.png</File>
+    <File>C:/Users/deathnell/Documents/Visual Studio 2015/Projects/DungeonsandDrinking/NewGame/Content/WhiteTile.png</File>
+    <File>C:/Users/deathnell/Documents/Visual Studio 2015/Projects/DungeonsandDrinking/NewGame/Content/RedTile.png</File>
+  </SourceFiles>
+</SourceFileCollection>
