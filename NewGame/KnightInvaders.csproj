@@ -48,7 +48,7 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\PokemonBoadGame\packages\MonoGame.Extended.0.5.149\lib\MonoGame.Extended.dll</HintPath>
+      <HintPath>..\Core\bin\Debug\MonoGame.Extended.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />

@@ -62,12 +62,14 @@
     <Compile Include="Entity\Component\ShieldComponents\ShieldGraphicsComponent.cs" />
     <Compile Include="Entity\Component\ShieldComponents\ShieldPhysicsComponent.cs" />
     <Compile Include="Entity\Component\StartPositionComponent.cs" />
-    <Compile Include="Entity\EntityObject.cs" />
+    <Compile Include="Entity\EntityAutomationObject.cs" />
     <Compile Include="Entity\Component\GraphicsComponent.cs" />
     <Compile Include="Entity\Component\PhysicsComponent.cs" />
     <Compile Include="Entity\Component\InputComponent.cs" />
     <Compile Include="Entity\Component\PlayerComponents\PlayerInputComponent.cs" />
     <Compile Include="Entity\EntityInputObject.cs" />
+    <Compile Include="Entity\EntityObjectBase.cs" />
+    <Compile Include="Entity\EntityUIObject.cs" />
     <Compile Include="GameObjectCollection.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

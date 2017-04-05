@@ -67,5 +67,3 @@ C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\R.cs.flag
 C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\uploadflags.txt
 C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\Core.dll.mdb
 C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.dll.mdb
-C:\Users\deathnell\Documents\SpaceInvadersClone\Core\obj\Debug\Core.dll.mdb
-C:\Users\deathnell\Documents\SpaceInvadersClone\Core\bin\Debug\Core.dll.mdb

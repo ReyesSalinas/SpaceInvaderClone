@@ -15,12 +15,12 @@ namespace Core.Entity.Component
             Animations = new List<Animation>();
         }
 
-        public virtual void Update(EntityObject entity, GameTime gameTime)
+        public virtual void Update(EntityObjectBase entity, GameTime gameTime)
         {           
            
         }
 
-        public virtual void Draw(EntityObject entity,SpriteBatch spriteBatch)
+        public virtual void Draw(EntityObjectBase entity,SpriteBatch spriteBatch)
         {
             var topLeftOfSprite = new Vector2(entity.X, entity.Y);
             Color tintColor = Color.White;

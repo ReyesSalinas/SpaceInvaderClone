@@ -7,6 +7,7 @@ using Core.Entity.Component.BulletComponents;
 using Microsoft.Xna.Framework.Graphics;
 using Core.Entity.Component.EnemyComponents;
 using Core.Entity.Component.ButtonComponents;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace Core.Service
 {
@@ -49,6 +50,15 @@ namespace Core.Service
         }
        public  void Update(GameTime gameTime)    
        {
+            var tCollection = TouchPanel.GetState();
+            foreach (var e in tCollection)
+            {
+                foreach (EntityObject u in UserComponents)
+                {
+                    u.Update(gameTime);
+                    
+                }
+            }
             foreach (EntityInputObject p in PlayerEntities)
             {
                 p.Update(gameTime);
@@ -73,10 +83,7 @@ namespace Core.Service
                 
                 e.Update(gameTime);
             }
-            foreach (EntityObject u in UserComponents)
-            {
-                u.Update(gameTime);
-            }            
+                     
             foreach (EntityObject b in BulletEntities)
             {
                 b.Update(gameTime);
@@ -137,6 +144,7 @@ namespace Core.Service
             var bulletRectangle = bullet.Rectangle();
             
         }
+        
         
     }
 }

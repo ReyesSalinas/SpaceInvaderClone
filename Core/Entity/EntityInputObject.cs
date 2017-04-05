@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Core.Entity
 {
-    public class EntityInputObject : EntityObject
+    public class EntityInputObject : EntityAutomationObject
     {
         private InputComponent _input;
         public EntityInputObject(Vector2 startPosition, InputComponent input, PhysicsComponent physics, GraphicsComponent graphics) : 

@@ -4,7 +4,7 @@ namespace Core.Entity.Component
 {
     public abstract class PhysicsComponent
     {
-        public virtual void Update(EntityObject entity,GameTime gameTime)
+        public virtual void Update(EntityObjectBase entity,GameTime gameTime)
         {
             
         }

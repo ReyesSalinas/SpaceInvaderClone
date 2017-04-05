@@ -85,5 +85,5 @@ C:\Users\deathnell\Documents\SpaceInvadersClone\NewGame\obj\Debug\android\assets
 C:\Users\deathnell\Documents\SpaceInvadersClone\NewGame\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\deathnell\Documents\SpaceInvadersClone\NewGame\bin\Android\AnyCPU\Debug\NewGame.dll.mdb
 C:\Users\deathnell\Documents\SpaceInvadersClone\NewGame\bin\Android\AnyCPU\Debug\Core.dll.mdb
+C:\Users\deathnell\Documents\SpaceInvadersClone\NewGame\bin\Android\AnyCPU\Debug\MonoGame.Extended.dll
 C:\Users\deathnell\Documents\SpaceInvadersClone\NewGame\obj\Debug\NewGame.dll.mdb
-C:\Users\deathnell\Documents\SpaceInvadersClone\NewGame\bin\Android\AnyCPU\Debug\NewGame.dll.mdb
