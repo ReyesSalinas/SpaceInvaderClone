@@ -13,27 +13,27 @@ namespace Core.Service
 {
     public class EntityContainer
     {
-       private  List<EntityObject> Entities { get; set; }
+       private  List<EntityObjectBase> Entities { get; set; }
        private  List<EntityInputObject> PlayerEntities { get; set; }
-       private  List<EntityObject> BulletEntities { get; set;}
-       private  List<EntityObject> ShieldEntities { get; set; }
-       private  List<EntityObject> UserComponents { get; set; }
+       private  List<EntityObjectBase> BulletEntities { get; set;}
+       private  List<EntityObjectBase> ShieldEntities { get; set; }
+       private  List<EntityObjectBase> UserComponents { get; set; }
 
        public EntityContainer()
        {
-            Entities = new List<EntityObject>();
+            Entities = new List<EntityObjectBase>();
             PlayerEntities = new List<EntityInputObject>();
-            BulletEntities = new List<EntityObject>();
-            ShieldEntities = new List<EntityObject>();
-            UserComponents = new List<EntityObject>();
+            BulletEntities = new List<EntityObjectBase>();
+            ShieldEntities = new List<EntityObjectBase>();
+            UserComponents = new List<EntityObjectBase>();
         }        
        public  void Initialize(GraphicsDevice graphicsDevice)
        {
             
             PlayerEntities.Add(new EntityInputObject(new Vector2((graphicsDevice.Viewport.Bounds.Right - 100) / 2, graphicsDevice.Viewport.Bounds.Bottom - 200),
                 new PlayerInputComponent(),new PlayerPhysicsComponent(), new PlayerGraphicsComponent(graphicsDevice)));
-            UserComponents.Add(new EntityInputObject(new Vector2(graphicsDevice.Viewport.Bounds.Right - 200, graphicsDevice.Viewport.Bounds.Top + 200),
-                new ButtonInputComponent(), new ButtonPhysicsComponent(), new ButtonGraphicsComponent(graphicsDevice)));
+            UserComponents.Add(new EntityUIObject(new Vector2(graphicsDevice.Viewport.Bounds.Right - 200, graphicsDevice.Viewport.Bounds.Top + 200),
+                new ButtonGraphicsComponent(graphicsDevice),new ButtonInputComponent()));
             //create enemies
             //for (int x = 0; x >= 3; x++)
             //{
@@ -53,7 +53,7 @@ namespace Core.Service
             var tCollection = TouchPanel.GetState();
             foreach (var e in tCollection)
             {
-                foreach (EntityObject u in UserComponents)
+                foreach (EntityObjectBase u in UserComponents)
                 {
                     u.Update(gameTime);
                     
@@ -63,7 +63,7 @@ namespace Core.Service
             {
                 p.Update(gameTime);
             }
-            foreach (EntityObject s in ShieldEntities)
+            foreach (EntityObjectBase s in ShieldEntities)
             {
                 if (CheckForBulletCollision(s))
                 {
@@ -72,7 +72,7 @@ namespace Core.Service
                 }
                 s.Update(gameTime);
             }
-            foreach (EntityObject e in Entities)
+            foreach (EntityObjectBase e in Entities)
             {
                 if (CheckForBulletCollision(e))
                 {
@@ -84,7 +84,7 @@ namespace Core.Service
                 e.Update(gameTime);
             }
                      
-            foreach (EntityObject b in BulletEntities)
+            foreach (EntityObjectBase b in BulletEntities)
             {
                 b.Update(gameTime);
             }                                                   
@@ -96,28 +96,27 @@ namespace Core.Service
             {
                 p.Draw(spriteBatch);
             }
-            foreach (EntityObject s in ShieldEntities)
-            {
-                
+            foreach (EntityObjectBase s in ShieldEntities)
+            {                
                 s.Draw(spriteBatch);
             }
-            foreach (EntityObject e in Entities)
+            foreach (EntityObjectBase e in Entities)
             {
                 e.Draw(spriteBatch);
             }
-            foreach (EntityObject u in UserComponents)
+            foreach (EntityObjectBase u in UserComponents)
             {
                 u.Draw(spriteBatch);
             }
-            foreach (EntityObject b in BulletEntities)
+            foreach (EntityObjectBase b in BulletEntities)
             {
                 b.Draw(spriteBatch);
             }
         }
 
-        private  bool CheckForBulletCollision(EntityObject entityOne)
+        private  bool CheckForBulletCollision(EntityObjectBase entityOne)
         {
-            foreach (EntityObject entityTwo in BulletEntities)
+            foreach (EntityObjectBase entityTwo in BulletEntities)
             {
                 if (entityOne.X >= entityTwo.Rectangle().Left && entityOne.X <= entityTwo.Rectangle().Right
                 && entityOne.Y >= entityTwo.Rectangle().Top && entityOne.X <= entityTwo.Rectangle().Bottom)
@@ -135,11 +134,11 @@ namespace Core.Service
                return;
             var playerRec = PlayerEntities.FirstOrDefault().Rectangle();
             var vector = new Vector2(playerRec.Center.X, playerRec.Y + 5);
-            var bullet = new EntityObject(vector, new BulletPhysicsComponent(), new BulletGraphicsComponent(graphicsDevice));
+            var bullet = new EntityAutomationObject(vector, new BulletPhysicsComponent(), new BulletGraphicsComponent(graphicsDevice));
             BulletEntities.Add(bullet);
             
         }
-        private  void BulletOutOfRange(EntityObject bullet)
+        private  void BulletOutOfRange(EntityObjectBase bullet)
         {
             var bulletRectangle = bullet.Rectangle();
             

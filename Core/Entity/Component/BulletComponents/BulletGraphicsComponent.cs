@@ -23,12 +23,12 @@ namespace Core.Entity.Component.BulletComponents
             blinkingSquare.AddFrame(new Rectangle(170, 0, 50, 50), TimeSpan.FromSeconds(.15));
             Animations.Add(blinkingSquare);
         }
-        public override void Update(EntityObject entity, GameTime gameTime)
+        public override void Update(EntityObjectBase entity, GameTime gameTime)
         {          
                        
         }
 
-        public override void Draw(EntityObject entity, SpriteBatch spriteBatch)
+        public override void Draw(EntityObjectBase entity, SpriteBatch spriteBatch)
         {                    
             var sourceRectangle = currentAnimation.CurrentRectangle;
             spriteBatch.Draw(characterSheetTexture, sourceRectangle.Location.ToVector2(), sourceRectangle, Color.White);            

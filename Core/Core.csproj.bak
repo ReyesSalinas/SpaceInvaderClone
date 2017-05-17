@@ -15,7 +15,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,17 +62,19 @@
     <Compile Include="Entity\Component\ShieldComponents\ShieldGraphicsComponent.cs" />
     <Compile Include="Entity\Component\ShieldComponents\ShieldPhysicsComponent.cs" />
     <Compile Include="Entity\Component\StartPositionComponent.cs" />
-    <Compile Include="Entity\EntityObject.cs" />
+    <Compile Include="Entity\EntityAutomationObject.cs" />
     <Compile Include="Entity\Component\GraphicsComponent.cs" />
     <Compile Include="Entity\Component\PhysicsComponent.cs" />
     <Compile Include="Entity\Component\InputComponent.cs" />
     <Compile Include="Entity\Component\PlayerComponents\PlayerInputComponent.cs" />
     <Compile Include="Entity\EntityInputObject.cs" />
+    <Compile Include="Entity\EntityObjectBase.cs" />
+    <Compile Include="Entity\EntityUIObject.cs" />
     <Compile Include="GameObjectCollection.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\SpriteWork.cs" />
+    <Compile Include="Service\EntityContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -90,13 +92,13 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Resources\Content\EnemyBullet.png" />
-    <Content Include="Resources\Content\Knight.png" />
+    <AndroidAsset Include="Resources\Content\Knight.png" />
     <AndroidAsset Include="Resources\Content\MoveButton.png" />
     <AndroidAsset Include="Resources\Content\MoveButtonBIG.png" />
     <AndroidAsset Include="Resources\Content\RedTile.png" />
     <AndroidAsset Include="Resources\Content\Warrior.png" />
     <AndroidAsset Include="Resources\Content\Shields.png" />
-    <Content Include="Resources\Content\WhiteTile.png" />
+    <AndroidAsset Include="Resources\Content\WhiteTile.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

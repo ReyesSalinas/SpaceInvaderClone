@@ -37,7 +37,7 @@ namespace Core.Entity.Component.ButtonComponents
             Animations.Add(buttonDown);
             currentAnimation = buttonUp;
         }
-        public override void Update(EntityObject entity, GameTime gameTime)
+        public override void Update(EntityObjectBase entity, GameTime gameTime)
         {
 
 
@@ -58,7 +58,7 @@ namespace Core.Entity.Component.ButtonComponents
             currentAnimation.Update(gameTime);
         }
 
-        public override void Draw(EntityObject entity, SpriteBatch spriteBatch)
+        public override void Draw(EntityObjectBase entity, SpriteBatch spriteBatch)
         {                    
             var sourceRectangle = currentAnimation.CurrentRectangle;
             var topLeftOfSprite = new Vector2(entity.X, entity.Y);

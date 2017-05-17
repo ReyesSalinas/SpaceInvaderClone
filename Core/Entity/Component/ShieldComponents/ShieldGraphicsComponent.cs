@@ -24,7 +24,7 @@ namespace Core.Entity.Component.ShieldComponents
             Animations.Add(halfShield);
         }       
 
-        public override void Draw(EntityObject entity, SpriteBatch spriteBatch)
+        public override void Draw(EntityObjectBase entity, SpriteBatch spriteBatch)
         {
             var sourceRectangle = currentAnimation.CurrentRectangle;
             spriteBatch.Draw(characterSheetTexture, sourceRectangle.Location.ToVector2(), sourceRectangle, Color.White);

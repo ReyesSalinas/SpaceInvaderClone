@@ -5,7 +5,7 @@ namespace Core.Entity.Component.EnemyComponents
     public class EnemyPhysicsComponent:PhysicsComponent
     {
         
-        public override void Update(EntityObject entity, GameTime gameTime)
+        public override void Update(EntityObjectBase entity, GameTime gameTime)
         {
             if (entity.X > 600)
             {

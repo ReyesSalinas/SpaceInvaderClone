@@ -20,6 +20,7 @@ namespace Core.Entity
         protected GraphicsComponent Graphics { get; set; }
         public float X { get; set; }
         public float Y { get; set; }
+        public Vector2 Velocity { get; set; }
         public EntityObjectBase(Vector2 startPosition,GraphicsComponent graphics)
         {
             X = startPosition.X;
@@ -35,6 +36,11 @@ namespace Core.Entity
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             Graphics.Draw(this, spriteBatch);
+        }
+
+        public Rectangle Rectangle()
+        {
+            return Graphics.currentAnimation.CurrentRectangle;
         }
 
     }

@@ -25,13 +25,13 @@ namespace Core.Entity.Component.EnemyComponents
             currentAnimation = walkDown;
             Animations.Add(walkDown);
         }
-        public override void Update(EntityObject entity, GameTime gameTime)
+        public override void Update(EntityObjectBase entity, GameTime gameTime)
         {
             
             currentAnimation.Update(gameTime);
         }
 
-        public override void Draw(EntityObject entity, SpriteBatch spriteBatch)
+        public override void Draw(EntityObjectBase entity, SpriteBatch spriteBatch)
         {
             var topLeftOfSprite = new Vector2(entity.X, playerHeight);
             Color tintColor = Color.White;

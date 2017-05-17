@@ -10,7 +10,7 @@ namespace Core.Entity
         private PhysicsComponent Physics { get; set; }
       
 
-        public Vector2 Velocity { get;  set; }
+        
        
 
         public EntityAutomationObject(Vector2 startPosition,PhysicsComponent physics,GraphicsComponent graphics):base(startPosition,graphics)
@@ -19,7 +19,7 @@ namespace Core.Entity
             Physics = physics;
             Graphics = graphics;
         }
-        public EntityAutomationObject(Vector2 velocity, Vector2 startPosition, PhysicsComponent physics, GraphicsComponent graphics)
+        public EntityAutomationObject(Vector2 velocity, Vector2 startPosition, PhysicsComponent physics, GraphicsComponent graphics):base(startPosition,graphics)
         {
             X = startPosition.X;
             Y = startPosition.Y;
@@ -27,19 +27,17 @@ namespace Core.Entity
             Physics = physics;
             Graphics = graphics;
         }
-        public virtual void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {            
             Physics.Update(this, gameTime);
-            Graphics.Update(this, gameTime);
+            base.Update(gameTime);
+
         }
-        public virtual void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
-            Graphics.Draw(this, spriteBatch);
+            base.Draw(spriteBatch);
         }
-        public Rectangle Rectangle()
-        {
-            return Graphics.currentAnimation.CurrentRectangle;
-        }
+        
 
 
         

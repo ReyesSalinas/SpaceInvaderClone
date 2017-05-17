@@ -15,12 +15,8 @@ namespace KnightInvaders
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        CharacterEntity character;
-        EntityObject player;
-        TileCursor cursor;
-        Button button;
         EntityContainer EntityContainer;
-        private Texture2D characterSheetTexture;
+        
 
         public Game1()
         {

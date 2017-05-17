@@ -19,7 +19,7 @@
     <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions>.m4a</AndroidStoreUncompressedFileExtensions>
     <MandroidI18n />
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <MonoGamePlatform>Android</MonoGamePlatform>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
@@ -48,7 +48,7 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\PokemonBoadGame\packages\MonoGame.Extended.0.5.149\lib\MonoGame.Extended.dll</HintPath>
+      <HintPath>..\Core\bin\Debug\MonoGame.Extended.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -109,11 +109,11 @@
     <AndroidAsset Include="Content\falco.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Knight.png" />
+    <AndroidAsset Include="Content\Knight.png" />
     <AndroidAsset Include="Content\RedTile.png" />
     <AndroidAsset Include="Content\MoveButton.png" />
     <AndroidAsset Include="Content\MoveButtonBIG.png" />
-    <Content Include="Content\WhiteTile.png" />
+    <AndroidAsset Include="Content\WhiteTile.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

@@ -9,12 +9,12 @@ namespace Core.Entity.Component.PlayerComponents
         {
 
         }
-        public override void Update(EntityObject entity)
+        public override void Update(EntityObjectBase entity)
         {
            
             entity.Velocity = GetDesiredVelocityFromInput(entity); //desiredVelocity;
         }
-        protected Vector2 TouchPanelWork(EntityObject entity)
+        protected Vector2 TouchPanelWork(EntityObjectBase entity)
         {
             var touchCol = TouchPanel.GetState();
 
@@ -57,7 +57,7 @@ namespace Core.Entity.Component.PlayerComponents
             return new Vector2();
         }
 
-        Vector2 GetDesiredVelocityFromInput(EntityObject entity)
+        Vector2 GetDesiredVelocityFromInput(EntityObjectBase entity)
         {
             Vector2 desiredVelocity = new Vector2();
             TouchCollection touchCollection = TouchPanel.GetState();
