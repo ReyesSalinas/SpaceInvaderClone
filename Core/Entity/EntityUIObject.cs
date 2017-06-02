@@ -18,16 +18,18 @@ namespace Core.Entity
     public class EntityUIObject:EntityObjectBase
     {
         InputComponent Input { get; set; }
-        public EntityUIObject(Vector2 startPosition,GraphicsComponent graphics,InputComponent input):base(startPosition,graphics)
+        public EntityUIObject(Vector2 startPosition,GraphicsComponent graphics,InputComponent input):base(startPosition,
+            graphics)
         {
             Input = input;
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime,TouchLocation touch)
         {
 
-            Input.Update(this);
+            Input.Update(this,touch);
             base.Update(gameTime);
+
         }
         public override void Draw(SpriteBatch spriteBatch)
         {

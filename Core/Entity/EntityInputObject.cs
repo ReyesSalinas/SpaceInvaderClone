@@ -13,9 +13,9 @@ namespace Core.Entity
             _input = input;
            
         }
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime,TouchLocation touch)
         {
-            _input.Update(this);
+            _input.Update(this,touch);
             base.Update(gameTime);
         }
 

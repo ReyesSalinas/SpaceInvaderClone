@@ -5,14 +5,17 @@ namespace Core.Entity.Component.PlayerComponents
 {
     public class PlayerInputComponent : InputComponent
     {
+        public const Rectangle PLAYERMOVEMENTRECTANGLE = new Rectangle(
+            0,graphicsDevice.Viewport.Bounds.Bottom - 200,graphicsDevice.Viewport.Bounds.Width,100)
+         const float desiredSpeed = 800;
         public PlayerInputComponent() : base()
         {
 
         }
-        public override void Update(EntityObjectBase entity)
+        public override void Update(EntityObjectBase entity,TouchLocation touch)
         {
            
-            entity.Velocity = GetDesiredVelocityFromInput(entity); //desiredVelocity;
+            entity.Velocity = GetDesiredVelocityFromInput(entity,touch); //desiredVelocity;
         }
         protected Vector2 TouchPanelWork(EntityObjectBase entity)
         {
@@ -57,23 +60,13 @@ namespace Core.Entity.Component.PlayerComponents
             return new Vector2();
         }
 
-        Vector2 GetDesiredVelocityFromInput(EntityObjectBase entity)
+        Vector2 GetDesiredVelocityFromInput(EntityObjectBase entity,TouchLocation touch)
         {
-            Vector2 desiredVelocity = new Vector2();
-            TouchCollection touchCollection = TouchPanel.GetState();
-            if (touchCollection.Count > 0)
-            {
-
-                desiredVelocity.X = touchCollection[0].Position.X - entity.X;
-        
-            }
-            if (desiredVelocity.X != 0 )
-            {
-                desiredVelocity.Normalize();
-                const float desiredSpeed = 800;
-                desiredVelocity *= desiredSpeed;
-            }
-            return desiredVelocity;
+                Vector2 desiredVelocity = new Vector2();
+                var desiredVelocity = touch.Position.X - entity.X;
+                desiredVelocity.Normalize();               
+                desiredVelocity *= desiredSpeed;                                     
+                return desiredVelocity;
         }
     }
 }

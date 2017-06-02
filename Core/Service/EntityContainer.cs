@@ -18,7 +18,7 @@ namespace Core.Service
        private  List<EntityObjectBase> BulletEntities { get; set;}
        private  List<EntityObjectBase> ShieldEntities { get; set; }
        private  List<EntityObjectBase> UserComponents { get; set; }
-
+       private GraphicsDevice graphicsDevice;
        public EntityContainer()
        {
             Entities = new List<EntityObjectBase>();
@@ -29,7 +29,7 @@ namespace Core.Service
         }        
        public  void Initialize(GraphicsDevice graphicsDevice)
        {
-            
+            this.graphicsDevice = graphicsDevice;
             PlayerEntities.Add(new EntityInputObject(new Vector2((graphicsDevice.Viewport.Bounds.Right - 100) / 2, graphicsDevice.Viewport.Bounds.Bottom - 200),
                 new PlayerInputComponent(),new PlayerPhysicsComponent(), new PlayerGraphicsComponent(graphicsDevice)));
             UserComponents.Add(new EntityUIObject(new Vector2(graphicsDevice.Viewport.Bounds.Right - 200, graphicsDevice.Viewport.Bounds.Top + 200),
@@ -51,27 +51,23 @@ namespace Core.Service
        public  void Update(GameTime gameTime)    
        {
             var tCollection = TouchPanel.GetState();
-            foreach (var e in tCollection)
+            foreach (var touch in tCollection)
             {
                 foreach (EntityObjectBase u in UserComponents)
                 {
-                    u.Update(gameTime);
-                    
+                    u.Update(gameTime,touch);
+                    if(UserControls.Touched)
+                    {
+                        UserControls.Touched = false;
+                        continue;   
+                    }
+                    foreach (EntityInputObject p in PlayerEntities)
+                    {
+                        p.Update(gameTime,touch);
+                    }
                 }
-            }
-            foreach (EntityInputObject p in PlayerEntities)
-            {
-                p.Update(gameTime);
-            }
-            foreach (EntityObjectBase s in ShieldEntities)
-            {
-                if (CheckForBulletCollision(s))
-                {
-                    ShieldEntities.Remove(s);
-                    continue;
-                }
-                s.Update(gameTime);
-            }
+            }            
+          
             foreach (EntityObjectBase e in Entities)
             {
                 if (CheckForBulletCollision(e))
@@ -86,6 +82,10 @@ namespace Core.Service
                      
             foreach (EntityObjectBase b in BulletEntities)
             {
+                if(UserContols.Any(x=>x.Action == UIAction.Shoot)
+                {
+                    AddBullet(graphicsDevice);
+                }
                 b.Update(gameTime);
             }                                                   
        }
