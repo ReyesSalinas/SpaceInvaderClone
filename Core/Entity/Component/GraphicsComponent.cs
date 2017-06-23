@@ -12,6 +12,7 @@ namespace Core.Entity.Component
 
         public GraphicsComponent()
         {
+            currentAnimation = new Animation();
             Animations = new List<Animation>();
         }
 

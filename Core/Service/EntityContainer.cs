@@ -15,17 +15,17 @@ namespace Core.Service
     {
        private  List<EntityObjectBase> Entities { get; set; }
        private  List<EntityInputObject> PlayerEntities { get; set; }
-       private  List<EntityObjectBase> BulletEntities { get; set;}
+       private  List<EntityAutomationObject> BulletEntities { get; set;}
        private  List<EntityObjectBase> ShieldEntities { get; set; }
-       private  List<EntityObjectBase> UserComponents { get; set; }
+       private  List<EntityUIObject> UserComponents { get; set; }
        private GraphicsDevice graphicsDevice;
        public EntityContainer()
        {
             Entities = new List<EntityObjectBase>();
             PlayerEntities = new List<EntityInputObject>();
-            BulletEntities = new List<EntityObjectBase>();
+            BulletEntities = new List<EntityAutomationObject>();
             ShieldEntities = new List<EntityObjectBase>();
-            UserComponents = new List<EntityObjectBase>();
+            UserComponents = new List<EntityUIObject>();
         }        
        public  void Initialize(GraphicsDevice graphicsDevice)
        {
@@ -48,46 +48,62 @@ namespace Core.Service
 
             //}
         }
-       public  void Update(GameTime gameTime)    
+       public void Update(GameTime gameTime)    
        {
             var tCollection = TouchPanel.GetState();
-            foreach (var touch in tCollection)
+            if (tCollection.Count > 0)
             {
-                foreach (EntityObjectBase u in UserComponents)
+                foreach (var touch in tCollection)
                 {
-                    u.Update(gameTime,touch);
-                    if(UserControls.Touched)
+                    foreach (EntityUIObject u in UserComponents)
                     {
-                        UserControls.Touched = false;
-                        continue;   
-                    }
-                    foreach (EntityInputObject p in PlayerEntities)
-                    {
-                        p.Update(gameTime,touch);
+                        u.Update(gameTime, touch);
+                        if (InputService.CurrentInput == InputType.Button)
+                        {
+                            continue;
+                        }
+                        foreach (EntityInputObject p in PlayerEntities)
+                        {
+                            p.Update(gameTime, touch);
+                        }
                     }
                 }
-            }            
-          
-            foreach (EntityObjectBase e in Entities)
-            {
-                if (CheckForBulletCollision(e))
-                {
-                    
-                    Entities.Remove(e);
-                    continue;
-                }
-                
-                e.Update(gameTime);
+
+             
             }
-                     
-            foreach (EntityObjectBase b in BulletEntities)
+            else
             {
-                if(UserContols.Any(x=>x.Action == UIAction.Shoot)
+                foreach (EntityUIObject u in UserComponents)
                 {
-                    AddBullet(graphicsDevice);
+                    u.Update(gameTime);
                 }
-                b.Update(gameTime);
-            }                                                   
+            }
+            //foreach (EntityObjectBase e in Entities)
+            //{
+            //    if (CheckForBulletCollision(e))
+            //    {
+
+            //        Entities.Remove(e);
+            //        continue;
+            //    }
+
+            //    e.Update(gameTime);
+            //}
+
+            if (InputService.CurrentAction == UserAction.Shoot)
+            {
+                AddBullet(graphicsDevice);
+                InputService.CurrentAction = UserAction.None;
+            }
+            BulletOutOfRange();
+            if(BulletEntities.Count > 0 )
+            {
+                foreach (EntityAutomationObject b in BulletEntities)
+                {
+                    b.Update(gameTime);
+                }
+            }
+                                                              
        }
 
         public  void Draw(SpriteBatch spriteBatch)
@@ -114,9 +130,9 @@ namespace Core.Service
             }
         }
 
-        private  bool CheckForBulletCollision(EntityObjectBase entityOne)
+        private bool CheckForBulletCollision(EntityObjectBase entityOne)
         {
-            foreach (EntityObjectBase entityTwo in BulletEntities)
+            foreach (EntityAutomationObject entityTwo in BulletEntities)
             {
                 if (entityOne.X >= entityTwo.Rectangle().Left && entityOne.X <= entityTwo.Rectangle().Right
                 && entityOne.Y >= entityTwo.Rectangle().Top && entityOne.X <= entityTwo.Rectangle().Bottom)
@@ -128,19 +144,38 @@ namespace Core.Service
             return false;    
         }
 
-        public  void AddBullet(GraphicsDevice graphicsDevice)
+        public void AddBullet(GraphicsDevice graphicsDevice)
         {
-            if (BulletEntities.Count == 3)
-               return;
-            var playerRec = PlayerEntities.FirstOrDefault().Rectangle();
-            var vector = new Vector2(playerRec.Center.X, playerRec.Y + 5);
-            var bullet = new EntityAutomationObject(vector, new BulletPhysicsComponent(), new BulletGraphicsComponent(graphicsDevice));
+            if (BulletEntities.Count == 9)
+            {
+                return;
+            }
+            
+            var playerRec = PlayerEntities.FirstOrDefault();
+
+            var velocity = new Vector2(0, 300);
+            var startposition = new Vector2(playerRec.X, playerRec.Y);
+            foreach (EntityAutomationObject e in BulletEntities)
+            {
+                if ( e.X <= startposition.X && e.Y <= startposition.Y &&
+                   (e.X + 50) >= startposition.X && (e.Y + 50) >= startposition.Y)
+                {
+                    return;
+                }
+            }
+            
+            var bullet = new EntityAutomationObject(velocity,startposition, new BulletPhysicsComponent(), new BulletGraphicsComponent(graphicsDevice));
+           
             BulletEntities.Add(bullet);
+
             
         }
-        private  void BulletOutOfRange(EntityObjectBase bullet)
+        private void BulletOutOfRange()
         {
-            var bulletRectangle = bullet.Rectangle();
+            BulletEntities.RemoveAll(bullet => bullet.X < 0 || bullet.Y < 0 ||
+                bullet.X > graphicsDevice.Viewport.Bounds.Right || bullet.Y > graphicsDevice.Viewport.Bounds.Bottom);
+           
+
             
         }
         

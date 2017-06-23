@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/deathnell/Documents/SpaceInvadersClone/NewGame/Content/RedTile.png</SourceFile>
-  <SourceTime>2016-12-12T23:51:17.1450658-06:00</SourceTime>
-  <DestFile>C:/Users/deathnell/Documents/SpaceInvadersClone/NewGame/Content/bin/Android/RedTile.xnb</DestFile>
-  <DestTime>2017-03-21T22:54:18.9119213-05:00</DestTime>
+  <SourceFile>C:/Users/deathnell/Documents/SpaceInvaderClone/NewGame/Content/RedTile.png</SourceFile>
+  <SourceTime>2017-05-10T22:58:31.9168328-05:00</SourceTime>
+  <DestFile>C:/Users/deathnell/Documents/SpaceInvaderClone/NewGame/Content/bin/Android/RedTile.xnb</DestFile>
+  <DestTime>2017-06-06T23:14:48.3732488-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T01:36:08-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -33,6 +33,7 @@ namespace Core.Entity
         {
             Graphics.Update(this,gameTime);
         }
+        
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             Graphics.Draw(this, spriteBatch);
@@ -40,7 +41,7 @@ namespace Core.Entity
 
         public Rectangle Rectangle()
         {
-            return Graphics.currentAnimation.CurrentRectangle;
+            return new Rectangle((int)X,(int)Y,Graphics.currentAnimation.CurrentRectangle.Width, Graphics.currentAnimation.CurrentRectangle.Height);
         }
 
     }

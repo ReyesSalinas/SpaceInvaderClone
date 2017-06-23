@@ -6,7 +6,7 @@ namespace Core.Entity.Component.BulletComponents
     {
         public override void Update(EntityObjectBase entity, GameTime gameTime)
         {
-            entity.Y += entity.Velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            entity.Y -= entity.Velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
         
     }

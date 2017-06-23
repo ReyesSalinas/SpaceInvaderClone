@@ -4,10 +4,10 @@
   <Platform>Android</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/deathnell/Documents/SpaceInvadersClone/NewGame/Content/falco.png</File>
-    <File>C:/Users/deathnell/Documents/SpaceInvadersClone/NewGame/Content/Warrior.png</File>
-    <File>C:/Users/deathnell/Documents/SpaceInvadersClone/NewGame/Content/charactersheet.png</File>
-    <File>C:/Users/deathnell/Documents/SpaceInvadersClone/NewGame/Content/WhiteTile.png</File>
-    <File>C:/Users/deathnell/Documents/SpaceInvadersClone/NewGame/Content/RedTile.png</File>
+    <File>C:/Users/deathnell/Documents/SpaceInvaderClone/NewGame/Content/falco.png</File>
+    <File>C:/Users/deathnell/Documents/SpaceInvaderClone/NewGame/Content/Warrior.png</File>
+    <File>C:/Users/deathnell/Documents/SpaceInvaderClone/NewGame/Content/charactersheet.png</File>
+    <File>C:/Users/deathnell/Documents/SpaceInvaderClone/NewGame/Content/WhiteTile.png</File>
+    <File>C:/Users/deathnell/Documents/SpaceInvaderClone/NewGame/Content/RedTile.png</File>
   </SourceFiles>
 </SourceFileCollection>

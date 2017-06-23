@@ -12,35 +12,40 @@ using Android.Widget;
 using Core.Entity.Component;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework;
+using Core.Service;
 
 namespace Core.Entity.Component.ButtonComponents
 {
     public class ButtonInputComponent : InputComponent
     {
-        Vector2 currentTouch;
+       
         public ButtonInputComponent() : base()
         {
 
         }
+        public override void Update(EntityObjectBase entity)
+        {
+            entity.Velocity = new Vector2();
+        }
         public override void Update(EntityObjectBase entity,TouchLocation touch)
         {    
                  
-            entity.Velocity = TouchPanelWork(entity,postion);
+            entity.Velocity = TouchPanelWork(entity, touch);
             
         }
         protected Vector2 TouchPanelWork(EntityObjectBase entity,TouchLocation touch)
-        {
-            TouchCollection touchCollection = TouchPanel.GetState();
-            if (touchCollection.Count > 0)
-            {
-                if(entity.Rectangle().Contains((int)touch.Position.X,(int)touch.Postion.Y))
-                {               
-                    Vector2 currentVelocity = touch.Position;                    
-                    touchCollection.Remove(touch);
+        {                       
+                
+                if(touch.Position.X >= entity.X && touch.Position.Y >= entity.Y 
+                    && touch.Position.X <= (entity.X + 198) && touch.Position.Y <= (entity.Y + 200))
+                {
+                    Vector2 currentVelocity = new Vector2();
+                    currentVelocity = touch.Position;
+                  
                     return currentVelocity;
-                }              
+                }                         
 
-            }
+            
             return new Vector2();
             
         }

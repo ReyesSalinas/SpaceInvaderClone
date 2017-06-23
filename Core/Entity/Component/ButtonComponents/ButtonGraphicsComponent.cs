@@ -45,18 +45,24 @@ namespace Core.Entity.Component.ButtonComponents
             if (entity.Velocity.X == 0 && entity.Velocity.Y == 0)
             {
                 currentAnimation = Animations[0];
+                InputService.CurrentInput = InputType.None;
+                InputService.CurrentAction = UserAction.None;
             }
             else
             {
+                InputService.CurrentInput = InputType.Button;
+                InputService.CurrentAction = UserAction.Shoot;
                 if (currentAnimation.Equals(Animations[1]))
                 {
                     currentAnimation.Update(gameTime);
                     return;
                 }
+                
                 currentAnimation = Animations[1];
             }            
             currentAnimation.Update(gameTime);
         }
+        
 
         public override void Draw(EntityObjectBase entity, SpriteBatch spriteBatch)
         {                    

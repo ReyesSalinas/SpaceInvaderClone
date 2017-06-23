@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Core.Entity.Component.PlayerComponents
 {
     public class PlayerInputComponent : InputComponent
     {
-        public const Rectangle PLAYERMOVEMENTRECTANGLE = new Rectangle(
-            0,graphicsDevice.Viewport.Bounds.Bottom - 200,graphicsDevice.Viewport.Bounds.Width,100)
+      
          const float desiredSpeed = 800;
         public PlayerInputComponent() : base()
         {
@@ -63,7 +63,7 @@ namespace Core.Entity.Component.PlayerComponents
         Vector2 GetDesiredVelocityFromInput(EntityObjectBase entity,TouchLocation touch)
         {
                 Vector2 desiredVelocity = new Vector2();
-                var desiredVelocity = touch.Position.X - entity.X;
+                desiredVelocity.X = touch.Position.X - entity.X;
                 desiredVelocity.Normalize();               
                 desiredVelocity *= desiredSpeed;                                     
                 return desiredVelocity;

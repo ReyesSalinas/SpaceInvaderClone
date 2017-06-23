@@ -12,11 +12,13 @@ using Android.Widget;
 using Core.Entity.Component;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace Core.Entity
 {
     public class EntityUIObject:EntityObjectBase
     {
+        public bool Touched { get; set; }
         InputComponent Input { get; set; }
         public EntityUIObject(Vector2 startPosition,GraphicsComponent graphics,InputComponent input):base(startPosition,
             graphics)
@@ -24,10 +26,16 @@ namespace Core.Entity
             Input = input;
         }
 
-        public override void Update(GameTime gameTime,TouchLocation touch)
+        public override void Update(GameTime gameTime)
         {
 
-            Input.Update(this,touch);
+            Input.Update(this);
+            base.Update(gameTime);
+
+        }
+        public void Update(GameTime gameTime, TouchLocation touch)
+        {
+            Input.Update(this, touch);
             base.Update(gameTime);
 
         }
